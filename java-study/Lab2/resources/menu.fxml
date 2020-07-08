@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="614.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
+   <children>
+      <ComboBox fx:id="thingComboBox" layoutX="104.0" layoutY="29.0" onAction="#setTableView" onDragDetected="#setTableView" prefHeight="31.0" prefWidth="191.0" />
+      <Label fx:id="objectLabel" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="34.0" prefHeight="21.0" prefWidth="81.0" text="Przedmiot:" />
+      <Label fx:id="patternLabel" layoutX="14.0" layoutY="116.0" prefHeight="21.0" prefWidth="418.0" />
+      <Button fx:id="readFromFileButton" layoutX="317.0" layoutY="29.0" mnemonicParsing="false" onAction="#readFromXmlFile" text="Wczytaj" />
+      <Button fx:id="saveFileButton" layoutX="442.0" layoutY="29.0" mnemonicParsing="false" onAction="#saveFileButton" text="Zapisz" />
+      <ScrollPane layoutX="14.0" layoutY="148.0" prefHeight="410.0" prefWidth="418.0">
+         <content>
+            <TableView fx:id="thingTableView" editable="true" onMouseClicked="#setImagePicture" prefHeight="407.0" prefWidth="416.0" />
+         </content>
+      </ScrollPane>
+      <ImageView fx:id="pictureImage" fitHeight="410.0" fitWidth="550.0" layoutX="487.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="pictureLabel" layoutX="734.0" layoutY="126.0" text="Obrazek" />
+      <Label fx:id="languageLabel" alignment="CENTER_RIGHT" layoutX="621.0" layoutY="34.0" prefHeight="21.0" prefWidth="72.0" text="Język:" />
+      <ComboBox fx:id="languageComboBox" layoutX="739.0" layoutY="29.0" onAction="#setLocale" prefWidth="150.0" />
+      <Button fx:id="addButton" layoutX="44.0" layoutY="574.0" mnemonicParsing="false" onAction="#addNewThingWindow" text="Dodaj" />
+      <Button fx:id="removeButton" layoutX="343.0" layoutY="574.0" mnemonicParsing="false" onAction="#removeFromTable" text="Usuń" />
+   </children>
+</AnchorPane>

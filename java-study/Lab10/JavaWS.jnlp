@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+" codebase="http://localhost:8085/" href="JavaWS.jnlp">
+	<information>
+		<title>Testing JNLP simple grafic editor</title>
+		<vendor>Wojciech Mielczarek</vendor>
+		<homepage href="http://localhost:8085/" />
+		<description>Some testing testing</description>
+	</information>
+	<security>
+		<all-permissions/>
+	</security>
+	<resources>
+		<j2se version="1.6+" />
+		<jar href="JavaWS.jar" />
+	</resources>
+	<application-desc main-class="EdytorGraficzny" />
+</jnlp>

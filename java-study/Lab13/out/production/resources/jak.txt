@@ -1,0 +1,4 @@
+1. pokaz board
+2. opcje
+3. ruch gracza
+4. zmien gracza
